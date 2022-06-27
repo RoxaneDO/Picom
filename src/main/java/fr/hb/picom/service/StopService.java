@@ -7,4 +7,6 @@ import java.util.List;
 public interface StopService {
     Stop getStop(Long id);
     List<Stop> getStops();
+
+    Stop addStop(Stop stop);
 }

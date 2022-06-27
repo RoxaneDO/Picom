@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ZoneService {
 
-    Zone getZone(Long id);
+    Zone getZone(Integer id);
     List<Zone> getZones();
     Zone addZone(Zone zone);
 

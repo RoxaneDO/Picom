@@ -11,16 +11,20 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class StopServiceImpl implements StopService {
-
-    private StopDao stopDao;
-
+private StopDao stopDao;
     @Override
-    public Stop getStop(Long id) {
-        return null;
+    public Stop getStop(Integer id) {
+        return stopDao.findById(id).orElse(null);
     }
 
     @Override
     public List<Stop> getStops() {
-        return null;
+        return stopDao.findAll();
     }
+
+    @Override
+    public Stop addStop(Stop stop) {
+        return stopDao.save(stop);
+    }
+
 }

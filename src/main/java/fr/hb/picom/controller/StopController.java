@@ -25,7 +25,7 @@ public class StopController {
     }
 
     @GetMapping("stops/{id}")
-    public Stop stopsGet(@PathVariable Long id) {
+    public Stop stopsGet(@PathVariable Integer id) {
         return stopService.getStop(id);
     }
 
